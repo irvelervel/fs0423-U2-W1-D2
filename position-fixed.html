@@ -7,7 +7,9 @@
     <style>
       .fixed {
         position: fixed;
-        top: 50%;
+        /* top: 50%;
+        left: 50%; */
+        bottom: 0;
         left: 50%;
         font-size: 3em;
         font-weight: bold;
@@ -15,6 +17,15 @@
         text-align: center;
         /* anticipazione di giovedì */
         transform: translate(-50%, -50%);
+      }
+
+      /* è possibile combinare queste tecniche con le media queries per avere risultati
+      diversi a seconda del device */
+      @media screen and (min-width: 992px) {
+        .fixed {
+          top: 50%;
+          /* left: 50%; */
+        }
       }
     </style>
   </head>
