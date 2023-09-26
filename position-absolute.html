@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position: absolute</title>
+    <style>
+      .absolute {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .absolute_1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .absolute_2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+
+      .relative {
+        position: relative;
+        border: 3px solid green;
+        width: 300px;
+        height: 300px;
+        left: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>POSITION: ABSOLUTE</h2>
+      <p>
+        Un elemento con "position: absolute" viene completamente rimosso dal
+        normale flow della pagina. Questo elemento a questo punto può venire
+        posizionato in modo assoluto utilizzando le proprietà top, bottom, left
+        e right. Se l'elemento in absolute è figlio di un contenitore che non
+        sia "position: static", seguirà LUI come riferimento invece del
+        viewport. La classica "combo" è un elemento in absolute dentro un
+        elemento in relative...
+      </p>
+      <div class="absolute">
+        Questo div è posizionato con "position: absolute".
+      </div>
+      <div class="relative">
+        <div class="absolute_1">Sempre "position: absolute"!</div>
+        <div class="absolute_2">Sempre "position: absolute"!</div>
+      </div>
+    </div>
+  </body>
+</html>
