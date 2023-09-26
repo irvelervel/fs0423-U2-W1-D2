@@ -1,0 +1,86 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.container {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  border: 1px solid black;
+}
+
+header {
+  background: navy;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+nav {
+  margin-bottom: 1em;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+footer {
+  margin-top: 2em;
+  background-color: blueviolet;
+  color: white;
+  text-align: center;
+  /* ripristino il normale flow della pagina */
+  clear: left;
+}
+
+footer p {
+  margin: 0;
+  padding: 1em;
+}
+
+main section p:last-of-type {
+  color: red;
+}
+
+aside#pic-left {
+  /* "sospendo" l'immagine verso sinistra */
+  float: left;
+  margin-right: 1em;
+}
+
+aside#pic-right {
+  /* "sospendo" l'immagine verso destra */
+  float: right;
+  margin-left: 1em;
+}
+
+aside img {
+  width: 250px;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 90%;
+  }
+
+  nav ul li {
+    display: inline;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+  }
+
+  /* notiamo come anche su schermi grandi NON tutti i p diventano verdi: questo perchè l'ultimo della section
+  è stato targhettato precedentemente da un selettore più specifico */
+  p {
+    color: green;
+  }
+}
